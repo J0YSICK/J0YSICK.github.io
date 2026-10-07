@@ -1,9 +1,291 @@
-<html>
- 
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joy - Portfolio</title>
+<meta name="description" content="Computer Science Technology student at Vanier College. Building desktop, web and mobile applications while learning databases, networking and software development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-  <h1>JOY</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+
+<main class="desktop" id="desktop">
+
+  <!-- Desktop icons -->
+  <nav class="icons" aria-label="Desktop">
+    <button class="icon" data-open="w-about"><i class="ic ic-doc"></i><span class="lbl">about_me.txt</span></button>
+    <button class="icon" data-open="w-projects"><i class="ic ic-folder"></i><span class="lbl" data-fr="Projets">Projects</span></button>
+    <button class="icon" data-open="w-skills"><i class="ic ic-chart"></i><span class="lbl" data-fr="Compétences">Skills</span></button>
+    <button class="icon" data-open="w-general"><i class="ic ic-doc"></i><span class="lbl" data-fr="Savoir-faire">General skills</span></button>
+    <button class="icon" data-open="w-exp"><i class="ic ic-folder"></i><span class="lbl" data-fr="Expérience">Experience</span></button>
+    <button class="icon" data-open="w-photo"><i class="ic ic-img"></i><span class="lbl">me.jpg</span></button>
+    <button class="icon" data-open="w-contact"><i class="ic ic-mail"></i><span class="lbl">Contact</span></button>
+
+    <a class="icon" href="resume.pdf" target="_blank" rel="noopener"><i class="ic ic-doc"></i><span class="lbl" data-fr="CV.pdf">resume.pdf</span></a>
+    <button class="icon" data-open="w-bin"><i class="ic ic-bin"></i><span class="lbl" data-fr="Vieux bugs">Old bugs</span></button>
+  </nav>
+
+  <!-- About -->
+  <section class="win raised about" id="w-about" data-x="120" data-y="20" style="--w:470px" aria-labelledby="t-about">
+    <div class="titlebar">
+      <span class="ttl" id="t-about">about_me.txt</span>
+      <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+    <div class="menubar" aria-hidden="true">
+      <span data-fr="Curieuse">Curious</span><span data-fr="Fiable">Reliable</span><span data-fr="Flexible">Flexible</span><span data-fr="Polyvalente">Versatile</span>
+    </div>
+    <div class="addr"><span data-fr="Adresse">Address</span><span class="field sunken">http://J0YSICK.github.io</span></div>
+    <div class="body sunken">
+      <h1>Joy</h1>
+      <p class="sub" data-fr="Étudiante en Techniques de l'informatique">Computer Science Technology student</p>
+      <dl>
+        <dt data-fr="École">School</dt><dd data-fr="Collège Vanier">Vanier College</dd>
+        <dt data-fr="Lieu">Based in</dt><dd>Montréal, QC</dd>
+      </dl>
+      <p data-fr="Je développe des applications web, de bureau et mobiles, des systèmes de réservation conçus pour de vrais clients jusqu'à une appli de suivi d'abonnements. J'apprends aussi les réseaux et les systèmes Linux sur lesquels elles fonctionnent.">I build web, desktop and mobile applications, from booking systems designed for real clients to a subscription-tracking app. I'm also learning the networks and Linux systems they run on.</p>
+      <p class="status" data-fr="À la recherche d'un stage en informatique pour l'hiver 2027.">Looking for an IT internship for Winter 2027.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <button class="btn default" data-open="w-projects" data-fr="Voir mes projets">See my projects</button>
+        <button class="btn" data-open="w-contact" data-fr="Me contacter">Contact me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo -->
+  <section class="win raised" id="w-photo" data-x="120" data-y="510" style="--w:230px" aria-labelledby="t-photo">
+    <div class="titlebar">
+      <span class="ttl" id="t-photo">me.jpg - Paint</span>
+      <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+    <div class="menubar" aria-hidden="true"><span data-fr="Fichier">File</span><span data-fr="Édition">Edit</span><span data-fr="Image">Image</span><span data-fr="Couleurs">Colors</span></div>
+    <div class="paint">
+      <div class="tools raised" aria-hidden="true"><i class="raised">✎</i><i class="raised">▢</i><i class="raised">◯</i><i class="raised">A</i><i class="raised">◪</i></div>
+      <div class="canvas sunken">
+
+        <img src="me.jpg" alt="Photo of Joy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="doodle" hidden><b data-fr="salut!">hi!</b><span class="hearts">♥ ♥ ♥</span></div>
+      </div>
+    </div>
+    <div class="palette" aria-hidden="true">
+      <i style="background:#000"></i><i style="background:#808080"></i><i style="background:#800000"></i><i style="background:#808000"></i><i style="background:#008000"></i><i style="background:#008080"></i><i style="background:#000080"></i>
+      <i style="background:#fff"></i><i style="background:#c0c0c0"></i><i style="background:#ff0000"></i><i style="background:#ffff00"></i><i style="background:#00ff00"></i><i style="background:#00ffff"></i><i style="background:#0000ff"></i>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="win raised" id="w-skills" data-x="372" data-y="540" style="--w:330px" aria-labelledby="t-skills">
+    <div class="titlebar">
+      <span class="ttl" id="t-skills" data-fr="compétences.exe">skills.exe</span>
+      <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+    <div class="body">
+
+      <div class="skill"><div class="row"><span>Java &amp; JavaFX</span><small data-fr="POO, interface graphique, MySQL">OOP, GUI, MySQL</small></div><div class="meter sunken" data-level="9"></div></div>
+      <div class="skill"><div class="row"><span>C# &amp; .NET</span><small>WinForms, LocalDB</small></div><div class="meter sunken" data-level="7"></div></div>
+      <div class="skill"><div class="row"><span data-fr="Applis web PHP">PHP web apps</span><small>Slim, Twig, PDO, MySQL</small></div><div class="meter sunken" data-level="6"></div></div>
+      <div class="skill"><div class="row"><span data-fr="Réseautique">Networking</span><small data-fr="Sous-réseaux, VLAN, routage">Subnetting, VLANs, routing</small></div><div class="meter sunken" data-level="7"></div></div>
+      <div class="skill"><div class="row"><span>Flutter &amp; Dart</span><small data-fr="Firebase, interface mobile">Firebase, mobile UI</small></div><div class="meter sunken" data-level="6"></div></div>
+      <div class="skill"><div class="row"><span>Linux &amp; Bash</span><small data-fr="Scripts, cron, systemd">Scripting, cron, systemd</small></div><div class="meter sunken" data-level="5"></div></div>
+      <div class="skills-more"><button class="btn" data-open="w-general" data-fr="Autres compétences…">More skills…</button></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="win raised projects" id="w-projects" data-x="615" data-y="20" style="--w:640px" aria-labelledby="t-projects">
+    <div class="titlebar">
+      <span class="ttl" id="t-projects" data-fr="C:\Joy\Projets">C:\Joy\Projects</span>
+      <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+    <div class="menubar" aria-hidden="true"><span data-fr="Fichier">File</span><span data-fr="Édition">Edit</span><span data-fr="Affichage">View</span><span data-fr="Aide">Help</span></div>
+    <div class="toolbar" aria-hidden="true"><span class="raised">◄</span><span class="raised">►</span><span class="raised">▲</span></div>
+    <div class="addr"><span data-fr="Adresse">Address</span><span class="field sunken" data-fr="C:\Joy\Projets">C:\Joy\Projects</span></div>
+    <div class="sunken scroll" style="margin:0 3px 3px">
+      <ol class="files">
+        <li class="file" id="p-chateaubriand">
+          <i class="ic ic-folder"></i>
+          <div>
+            <h3>Le Châteaubriand</h3>
+            <p data-fr="Système de réservation et de gestion de clients pour une salle de réception. Les clients soumettent leurs demandes d'événement en ligne, et les propriétaires gèrent clients, événements, menus, paiements et plans de salle depuis un tableau de bord. Comprend un plan de salle interactif sur canvas, l'authentification à deux facteurs, une version française et un déploiement automatique avec GitHub Actions.">Booking and client management system for a reception hall. Clients submit event requests online, and the owners manage clients, events, menus, payments and seating from an admin dashboard. Includes an interactive canvas floor planner, two-factor login, a French version and automatic deployment with GitHub Actions.</p>
+            <p class="tools-used" data-fr="Projet d'équipe, 4e session. PHP, Slim, Twig, RedBeanPHP, JavaScript, GitHub Actions">Team project, 4th semester. PHP, Slim, Twig, RedBeanPHP, JavaScript, GitHub Actions</p>
+            <div class="links"><a class="btn" href="https://github.com/DPerrotta06/System-Dev-Project" target="_blank" rel="noopener">Code</a></div>
+          </div>
+        </li>
+
+        <li class="file" id="p-salon">
+          <i class="ic ic-folder"></i>
+          <div>
+            <h3 data-fr="Réservation pour salon d'ongles">Nail salon booking site</h3>
+            <p data-fr="Site de réservation en ligne conçu pour une propriétaire de salon d'ongles. Les clients choisissent un service, une date et une heure, puis réservent avec un compte ou comme invité, avec vérification de disponibilité. La propriétaire gère services, rendez-vous, FAQ et avis dans une section d'administration protégée par rôles.">Online booking site built for a nail salon owner. Customers pick a service, date and time, then book with an account or as a guest, with an availability check to prevent double bookings. The owner manages services, appointments, FAQs and reviews in a role-protected admin area.</p>
+            <p class="tools-used" data-fr="Projet d'équipe, 4e session. PHP, Slim, Twig, MySQL, RedBeanPHP">Team project, 4th semester. PHP, Slim, Twig, MySQL, RedBeanPHP</p>
+            <div class="links"><a class="btn" href="https://github.com/Thevinh0207/SYSTEM-DEVELOPTMENT" target="_blank" rel="noopener">Code</a></div>
+          </div>
+        </li>
+
+        <li class="file" id="p-subwallet">
+          <i class="ic ic-folder"></i>
+          <div>
+            <h3>Sub Wallet</h3>
+            <p data-fr="Application mobile pour suivre ses abonnements. Les utilisateurs se connectent, classent leurs abonnements par catégorie, voient les prix dans la devise de leur choix et reçoivent un rappel deux jours avant chaque renouvellement.">Mobile app for keeping track of subscriptions. Users sign in, sort their subscriptions into categories, see prices in the currency of their choice and get a reminder two days before each renewal.</p>
+            <p class="tools-used" data-fr="Projet d'équipe, 4e session. Flutter, Dart, Firebase Auth, Cloud Firestore">Team project, 4th semester. Flutter, Dart, Firebase Auth, Cloud Firestore</p>
+            <div class="links"><a class="btn" href="https://github.com/DaveenaPatel/SubscriptionManager" target="_blank" rel="noopener">Code</a></div>
+          </div>
+        </li>
+
+        <li class="file" id="p-unix">
+          <i class="ic ic-folder"></i>
+          <div>
+            <h3 data-fr="Menu d'administration Linux">Linux admin menu</h3>
+            <p data-fr="Outil en ligne de commande qui regroupe les tâches courantes d'administration Linux dans un seul menu : état du système et processus, sauvegardes planifiées avec cron, configuration réseau et Wi-Fi, services systemd, utilisateurs et groupes.">Command-line tool that brings common Linux admin tasks into one menu: system status and processes, scheduled backups with cron, network and Wi-Fi setup, systemd services, and user and group management.</p>
+            <p class="tools-used" data-fr="Projet d'équipe, 3e session. Bash, cron, systemd">Team project, 3rd semester. Bash, cron, systemd</p>
+            <div class="links"><a class="btn" href="https://github.com/gvogas/Unix" target="_blank" rel="noopener">Code</a></div>
+          </div>
+        </li>
+
+        <li class="file" id="p-flappyfish">
+          <i class="ic ic-folder"></i>
+          <div>
+            <h3>Flappy Fish</h3>
+            <p data-fr="Un jeu d'arcade inspiré de Flappy Bird, mais sous l'eau : on guide un poisson entre les obstacles le plus longtemps possible.">An arcade game inspired by Flappy Bird, but underwater: guide a fish through the obstacles for as long as you can.</p>
+            <p class="tools-used" data-fr="Projet d'équipe, 1re session, Programmation de jeux">Team project, 1st semester, Game Programming</p>
+            <div class="links"><a class="btn" href="https://github.com/FARASHAAFG/FlappyFish" target="_blank" rel="noopener">Code</a></div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="statusbar"><span class="sunken" data-fr="5 projet(s)">5 project(s)</span><span class="sunken" data-fr="Poste de travail">My computer</span></div>
+  </section>
+
+  <!-- Experience -->
+  <section class="win raised" id="w-exp" data-x="725" data-y="575" style="--w:430px" aria-labelledby="t-exp">
+    <div class="titlebar">
+      <span class="ttl" id="t-exp" data-fr="expérience.doc">experience.doc</span>
+      <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+    <div class="body sunken">
+
+      <div class="job">
+        <h3 data-fr="Adjointe administrative">Administrative assistant</h3>
+        <p class="when" data-fr="Cote R Expert - À distance, temps partiel, en cours">Cote R Expert - Remote, part-time, current</p>
+        <p data-fr="Soutien administratif pour une entreprise qui accompagne des étudiants du cégep en Sciences de la nature. Je réponds aux courriels et aux appels des étudiants et des parents, et je m'occupe des tâches administratives courantes.">Administrative support for a company that helps CEGEP students in Sciences de la nature. I answer emails and phone calls and take care of day-to-day administrative tasks.</p>
+      </div>
+      <div class="job">
+        <h3 data-fr="Service alimentaire">Food service</h3>
+        <p class="when" data-fr="Banh Mi & Thé Perlé - Temps partiel, Été 2026">Banh Mi & Thé Perlé - Part-time, Summer 2026</p>
+        <p data-fr="Service à la clientèle dans un comptoir de thé aux perles et de banh mi au rythme rapide.">Customer service in a fast-paced bubble tea and banh mi shop.</p>
+      </div>
+      <div class="job">
+        <h3 data-fr="Tutorat entre pairs">Peer tutoring</h3>
+        <p class="when" data-fr="Vanier College - Automne 2025 et Hiver 2026">Vanier College - Autumn 2025 & Winter 2026</p>
+        <p data-fr="J'aide d'autres étudiants dans leurs cours de mathématiques et de sciences.">Helping fellow students with their math and science courses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- General skills -->
+  <section class="win raised" id="w-general" data-x="430" data-y="150" style="--w:360px" aria-labelledby="t-general" hidden>
+    <div class="titlebar">
+      <span class="ttl" id="t-general" data-fr="compétences_générales.txt">general_skills.txt</span>
+      <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+    <div class="body">
+      <fieldset class="group">
+        <legend data-fr="Savoir-être">Soft skills</legend>
+        <ul class="checks">
+          <li data-fr="Communication avec la clientèle, par courriel et au téléphone">Client communication by email and phone</li>
+          <li data-fr="Service à la clientèle dans un milieu rapide">Customer service in a fast-paced setting</li>
+          <li data-fr="Expliquer des notions clairement (tutorat)">Explaining concepts clearly (tutoring)</li>
+          <li data-fr="Travail d'équipe sur des projets d'une session">Teamwork on semester-long projects</li>
+          <li data-fr="Organisation et gestion du temps">Organization and time management</li>
+        </ul>
+      </fieldset>
+      <fieldset class="group">
+        <legend data-fr="Outils">Tools</legend>
+        <ul class="checks">
+          <li>Git &amp; GitHub</li>
+          <li>MySQL &amp; Firebase</li>
+          <li>Linux (Bash)</li>
+          <li>Unity</li>
+          <li>Postman</li>
+          <!-- <li>Cisco Packet Tracer</li> -->
+        </ul>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend data-fr="Langues">Languages</legend>
+        <ul class="checks">
+          <li data-fr="Anglais">English</li>
+          <li data-fr="Français">French</li>
+          <li data-fr="Mandarin">Mandarin</li>
+        </ul>
+      </fieldset>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="win raised" id="w-contact" data-x="800" data-y="250" style="--w:340px" aria-labelledby="t-contact" hidden>
+    <div class="titlebar">
+      <span class="ttl" id="t-contact">Contact</span>
+      <div class="tbtns"><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+
+    <div class="dialog">
+      <i class="ic ic-mail"></i>
+      <div>
+        <p><b data-fr="Discutons!">Let's talk!</b></p>
+        <p>jiayu.joyho@gmail.com</p>
+        <p>github.com/J0YSICK</p>
+      </div>
+    </div>
+    <div class="dialog-actions">
+      <!--<a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>-->
+      <a class="btn" href="https://github.com/J0YSICK" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn default" href="mailto:jiayu.joyho@gmail.com" data-fr="Écrire">Email</a>
+    </div>
+  </section>
+
+  <!-- Recycle bin -->
+  <section class="win raised" id="w-bin" data-x="520" data-y="300" style="--w:300px" aria-labelledby="t-bin" hidden>
+    <div class="titlebar">
+      <span class="ttl" id="t-bin" data-fr="Vieux bugs">Old bugs</span>
+      <div class="tbtns"><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+    <div class="dialog">
+      <i class="ic ic-bin"></i>
+      <p data-fr="Cette corbeille est vide (pour l'instant).">This bin is empty (for now).</p>
+    </div>
+    <div class="dialog-actions"><button class="btn default close-btn">OK</button></div>
+  </section>
+
+</main>
+
+<!-- Start menu -->
+<div class="menu raised" id="menu" hidden>
+  <div class="side">Joy.exe</div>
+  <ul>
+    <li><button data-open="w-about"><i class="ic ic-doc"></i><span>about_me.txt</span></button></li>
+    <li><button data-open="w-projects"><i class="ic ic-folder"></i><span data-fr="Projets">Projects</span></button></li>
+    <li><button data-open="w-skills"><i class="ic ic-chart"></i><span data-fr="Compétences">Skills</span></button></li>
+    <li><button data-open="w-general"><i class="ic ic-doc"></i><span data-fr="Savoir-faire">General skills</span></button></li>
+    <li><button data-open="w-exp"><i class="ic ic-folder"></i><span data-fr="Expérience">Experience</span></button></li>
+    <li><button data-open="w-contact"><i class="ic ic-mail"></i><span>Contact</span></button></li>
+    <li><hr></li>
+    <li><a href="resume.pdf" target="_blank" rel="noopener"><i class="ic ic-doc"></i><span data-fr="CV (PDF)">Résumé (PDF)</span></a></li>
+  </ul>
+</div>
+
+<!-- Taskbar -->
+<footer class="taskbar">
+  <button class="btn start" id="start" aria-expanded="false" aria-controls="menu"><span class="heart">♥</span>Joy</button>
+  <div class="tasks" id="tasks"></div>
+  <div class="tray sunken">
+    <button id="lang" type="button" aria-label="Lire en français">FR</button>
+    <span id="clock"></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
- 
 </html>
