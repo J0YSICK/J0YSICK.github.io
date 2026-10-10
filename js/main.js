@@ -56,13 +56,19 @@
     w.hidden = false;
     w.classList.remove('min');
     focusWin(w);
+    syncVideos(w);
     if (!mq.matches) w.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  function closeWin(w) { w.hidden = true; w.classList.remove('active'); renderTasks(); }
+  function syncVideos(w) {
+    var off = w.hidden || w.classList.contains('min');
+    w.querySelectorAll('video[autoplay]').forEach(function (v) { if (off) v.pause(); else v.play().catch(function () {}); });
+  }
+
+  function closeWin(w) { w.hidden = true; w.classList.remove('active'); renderTasks(); syncVideos(w); }
   function minWin(w) {
     if (!mq.matches) { closeWin(w); return; }
-    w.classList.add('min'); w.classList.remove('active'); renderTasks();
+    w.classList.add('min'); w.classList.remove('active'); renderTasks(); syncVideos(w);
   }
 
   function renderTasks() {
@@ -121,6 +127,26 @@
   startBtn.addEventListener('click', function (e) { e.stopPropagation(); toggleMenu(menu.hidden); });
   document.addEventListener('click', function (e) { if (!menu.contains(e.target)) toggleMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggleMenu(false); });
+
+  // Renders feed: likes, double-click to like, videos
+  function setLike(btn, on) {
+    btn.setAttribute('aria-pressed', String(on));
+    btn.classList.remove('bump'); void btn.offsetWidth; btn.classList.add('bump');
+  }
+  document.querySelectorAll('.post').forEach(function (post) {
+    var btn = post.querySelector('.like');
+    var media = post.querySelector('.post-media');
+    var burst = post.querySelector('.burst');
+    btn.addEventListener('click', function () { setLike(btn, btn.getAttribute('aria-pressed') !== 'true'); });
+    media.addEventListener('dblclick', function () {
+      setLike(btn, true);
+      burst.classList.remove('pop'); void burst.offsetWidth; burst.classList.add('pop');
+    });
+  });
+  // Respect reduced-motion: don't autoplay the loop, show controls instead
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.post-media video').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });
+  }
 
   // Clock
   var clock = document.getElementById('clock');

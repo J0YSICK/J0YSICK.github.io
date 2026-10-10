@@ -11,9 +11,9 @@
 <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-
+ 
 <main class="desktop" id="desktop">
-
+ 
   <!-- Desktop icons -->
   <nav class="icons" aria-label="Desktop">
     <button class="icon" data-open="w-about"><i class="ic ic-doc"></i><span class="lbl">about_me.txt</span></button>
@@ -21,13 +21,14 @@
     <button class="icon" data-open="w-skills"><i class="ic ic-chart"></i><span class="lbl" data-fr="Compétences">Skills</span></button>
     <button class="icon" data-open="w-general"><i class="ic ic-doc"></i><span class="lbl" data-fr="Savoir-faire">General skills</span></button>
     <button class="icon" data-open="w-exp"><i class="ic ic-folder"></i><span class="lbl" data-fr="Expérience">Experience</span></button>
+    <button class="icon" data-open="w-blender"><i class="ic ic-cam"></i><span class="lbl">Joygram</span></button>
     <button class="icon" data-open="w-photo"><i class="ic ic-img"></i><span class="lbl">me.jpg</span></button>
     <button class="icon" data-open="w-contact"><i class="ic ic-mail"></i><span class="lbl">Contact</span></button>
-
+ 
     <a class="icon" href="assets/resume.pdf" target="_blank" rel="noopener"><i class="ic ic-doc"></i><span class="lbl" data-fr="CV.pdf">resume.pdf</span></a>
     <button class="icon" data-open="w-bin"><i class="ic ic-bin"></i><span class="lbl" data-fr="Vieux bugs">Old bugs</span></button>
   </nav>
-
+ 
   <!-- About -->
   <section class="win raised about" id="w-about" data-x="120" data-y="20" style="--w:470px" aria-labelledby="t-about">
     <div class="titlebar">
@@ -53,7 +54,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- Photo -->
   <section class="win raised" id="w-photo" data-x="120" data-y="510" style="--w:230px" aria-labelledby="t-photo">
     <div class="titlebar">
@@ -64,7 +65,7 @@
     <div class="paint">
       <div class="tools raised" aria-hidden="true"><i class="raised">✎</i><i class="raised">▢</i><i class="raised">◯</i><i class="raised">A</i><i class="raised">◪</i></div>
       <div class="canvas sunken">
-
+ 
         <img src="assets/me.jpg" alt="Photo of Joy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
         <div class="doodle" hidden><b data-fr="salut!">hi!</b><span class="hearts">♥ ♥ ♥</span></div>
       </div>
@@ -74,7 +75,7 @@
       <i style="background:#fff"></i><i style="background:#c0c0c0"></i><i style="background:#ff0000"></i><i style="background:#ffff00"></i><i style="background:#00ff00"></i><i style="background:#00ffff"></i><i style="background:#0000ff"></i>
     </div>
   </section>
-
+ 
   <!-- Skills -->
   <section class="win raised" id="w-skills" data-x="372" data-y="540" style="--w:330px" aria-labelledby="t-skills">
     <div class="titlebar">
@@ -82,7 +83,7 @@
       <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
     </div>
     <div class="body">
-
+ 
       <div class="skill"><div class="row"><span>Java &amp; JavaFX</span><small data-fr="POO, interface graphique, MySQL">OOP, GUI, MySQL</small></div><div class="meter sunken" data-level="9"></div></div>
       <div class="skill"><div class="row"><span>C# &amp; .NET</span><small>WinForms, LocalDB</small></div><div class="meter sunken" data-level="7"></div></div>
       <div class="skill"><div class="row"><span data-fr="Applis web PHP">PHP web apps</span><small>Slim, Twig, PDO, MySQL</small></div><div class="meter sunken" data-level="6"></div></div>
@@ -92,7 +93,7 @@
       <div class="skills-more"><button class="btn" data-open="w-general" data-fr="Autres compétences…">More skills…</button></div>
     </div>
   </section>
-
+ 
   <!-- Projects -->
   <section class="win raised projects" id="w-projects" data-x="615" data-y="20" style="--w:640px" aria-labelledby="t-projects">
     <div class="titlebar">
@@ -113,7 +114,7 @@
             <div class="links"><a class="btn" href="https://github.com/DPerrotta06/System-Dev-Project" target="_blank" rel="noopener">Code</a></div>
           </div>
         </li>
-
+ 
         <li class="file" id="p-salon">
           <i class="ic ic-folder"></i>
           <div>
@@ -123,7 +124,7 @@
             <div class="links"><a class="btn" href="https://github.com/Thevinh0207/SYSTEM-DEVELOPTMENT" target="_blank" rel="noopener">Code</a></div>
           </div>
         </li>
-
+ 
         <li class="file" id="p-subwallet">
           <i class="ic ic-folder"></i>
           <div>
@@ -133,7 +134,7 @@
             <div class="links"><a class="btn" href="https://github.com/DaveenaPatel/SubscriptionManager" target="_blank" rel="noopener">Code</a></div>
           </div>
         </li>
-
+ 
         <li class="file" id="p-unix">
           <i class="ic ic-folder"></i>
           <div>
@@ -143,7 +144,7 @@
             <div class="links"><a class="btn" href="https://github.com/gvogas/Unix" target="_blank" rel="noopener">Code</a></div>
           </div>
         </li>
-
+ 
         <li class="file" id="p-flappyfish">
           <i class="ic ic-folder"></i>
           <div>
@@ -157,7 +158,84 @@
     </div>
     <div class="statusbar"><span class="sunken" data-fr="5 projet(s)">5 project(s)</span><span class="sunken" data-fr="Poste de travail">My computer</span></div>
   </section>
-
+ 
+  <!-- Joygram (Instagram-style feed of things I make) -->
+  <section class="win raised gram" id="w-blender" data-x="470" data-y="40" style="--w:400px" aria-labelledby="t-blender" hidden>
+    <div class="titlebar">
+      <span class="ttl" id="t-blender">joygram.exe - @j0ysick</span>
+      <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
+    </div>
+    <div class="profile">
+      <span class="profile-pic sunken"><img src="assets/me.jpg" alt="" onerror="this.remove()"><b aria-hidden="true">J</b></span>
+      <div>
+        <p class="profile-name">j0ysick</p>
+        <ul class="stats">
+          <li><b>3</b> <span data-fr="publications">posts</span></li>
+          <!-- <li><b>Blender</b></li> -->
+        </ul>
+        <p class="profile-bio" data-fr="Des trucs que je fais au lieu d'étudier :p">Stuff I make for fun instead of studying :p</p>
+      </div>
+    </div>
+    <div class="feed sunken scroll">
+        <article class="post">
+          <header class="post-head">
+            <span class="post-avatar" aria-hidden="true"><img src="assets/me.jpg" alt="" onerror="this.remove()">J</span>
+            <span class="post-user">j0ysick</span>
+            <span class="post-tool">Blender</span>
+          </header>
+          <div class="post-media">
+            <img src="assets/blender/blender_donut.png" alt="Blender render 1" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+            <span class="media-missing" hidden>assets/blender/blender_donut.png</span>
+            <span class="burst" aria-hidden="true"><svg viewBox="-1 -1 13 11" aria-hidden="true"><path d="M1 0H4V1H5V2H6V1H7V0H10V1H11V4H10V5H9V6H8V7H7V8H6V9H5V8H4V7H3V6H2V5H1V4H0V1H1Z"/></svg></span>
+          </div>
+          <div class="post-actions">
+            <button class="like" type="button" aria-pressed="false" aria-label="Like"><svg viewBox="-1 -1 13 11" aria-hidden="true"><path d="M1 0H4V1H5V2H6V1H7V0H10V1H11V4H10V5H9V6H8V7H7V8H6V9H5V8H4V7H3V6H2V5H1V4H0V1H1Z"/></svg></button>
+          </div>
+          <p class="post-cap"><b>j0ysick</b> <span data-fr="Le classique donut Blender">Classic Blender donut</span> <span class="tags">#blender #3d</span></p>
+          <time class="post-date" datetime="2024-01" data-fr="Janvier 2024">January 2024</time>
+        </article>
+ 
+        <article class="post">
+          <header class="post-head">
+            <span class="post-avatar" aria-hidden="true"><img src="assets/me.jpg" alt="" onerror="this.remove()">J</span>
+            <span class="post-user">j0ysick</span>
+            <span class="post-tool">Blender</span>
+          </header>
+          <div class="post-media">
+            <img src="assets/blender/isometric_room.png" alt="Blender render 2" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+            <span class="media-missing" hidden>assets/blender/isometric_room.png</span>
+            <span class="burst" aria-hidden="true"><svg viewBox="-1 -1 13 11" aria-hidden="true"><path d="M1 0H4V1H5V2H6V1H7V0H10V1H11V4H10V5H9V6H8V7H7V8H6V9H5V8H4V7H3V6H2V5H1V4H0V1H1Z"/></svg></span>
+          </div>
+          <div class="post-actions">
+            <button class="like" type="button" aria-pressed="false" aria-label="Like"><svg viewBox="-1 -1 13 11" aria-hidden="true"><path d="M1 0H4V1H5V2H6V1H7V0H10V1H11V4H10V5H9V6H8V7H7V8H6V9H5V8H4V7H3V6H2V5H1V4H0V1H1Z"/></svg></button>
+          </div>
+          <p class="post-cap"><b>j0ysick</b> <span data-fr="Je devrais changer pour le design d’intérieur??">Should I switch to interior design??</span> <span class="tags">#blender #3d</span></p>
+          <time class="post-date" datetime="2024-02" data-fr="Février 2024">February 2024</time>
+        </article>
+ 
+        <article class="post">
+          <header class="post-head">
+            <span class="post-avatar" aria-hidden="true"><img src="assets/me.jpg" alt="" onerror="this.remove()">J</span>
+            <span class="post-user">j0ysick</span>
+            <span class="post-tool">Blender</span>
+          </header>
+          <div class="post-media">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Looping animation">
+              <source src="assets/blender/cube_conveyor.mp4" type="video/mp4" onerror="var v=this.parentNode;v.hidden=true;v.nextElementSibling.hidden=false">
+            </video>
+            <span class="media-missing" hidden>assets/blender/cube_conveyor.mp4</span>
+            <span class="burst" aria-hidden="true"><svg viewBox="-1 -1 13 11" aria-hidden="true"><path d="M1 0H4V1H5V2H6V1H7V0H10V1H11V4H10V5H9V6H8V7H7V8H6V9H5V8H4V7H3V6H2V5H1V4H0V1H1Z"/></svg></span>
+          </div>
+          <div class="post-actions">
+            <button class="like" type="button" aria-pressed="false" aria-label="Like"><svg viewBox="-1 -1 13 11" aria-hidden="true"><path d="M1 0H4V1H5V2H6V1H7V0H10V1H11V4H10V5H9V6H8V7H7V8H6V9H5V8H4V7H3V6H2V5H1V4H0V1H1Z"/></svg></button>
+          </div>
+          <p class="post-cap"><b>j0ysick</b> <span data-fr="Première animation Blender!">First Blender animation!</span> <span class="tags">#blender #3d</span></p>
+          <time class="post-date" datetime="2026-10" data-fr="Mars 2024">March 2024</time>
+        </article>
+    </div>
+    <div class="statusbar"><span class="sunken" data-fr="Double-cliquez sur une image pour l'aimer">Double-click a post to like it</span><span class="sunken" data-fr="3 publications">3 posts</span></div>
+  </section>
+ 
   <!-- Experience -->
   <section class="win raised" id="w-exp" data-x="725" data-y="575" style="--w:430px" aria-labelledby="t-exp">
     <div class="titlebar">
@@ -165,7 +243,7 @@
       <div class="tbtns"><button class="tb min" aria-label="Minimize">_</button><span class="tb" aria-hidden="true">□</span><button class="tb close" aria-label="Close">×</button></div>
     </div>
     <div class="body sunken">
-
+ 
       <div class="job">
         <h3 data-fr="Adjointe administrative">Administrative assistant</h3>
         <p class="when" data-fr="Cote R Expert - À distance, temps partiel, en cours">Cote R Expert - Remote, part-time, current</p>
@@ -183,7 +261,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- General skills -->
   <section class="win raised" id="w-general" data-x="430" data-y="150" style="--w:360px" aria-labelledby="t-general" hidden>
     <div class="titlebar">
@@ -212,7 +290,7 @@
           <!-- <li>Cisco Packet Tracer</li> -->
         </ul>
       </fieldset>
-
+ 
       <fieldset class="group">
         <legend data-fr="Langues">Languages</legend>
         <ul class="checks">
@@ -223,14 +301,14 @@
       </fieldset>
     </div>
   </section>
-
+ 
   <!-- Contact -->
   <section class="win raised" id="w-contact" data-x="800" data-y="250" style="--w:340px" aria-labelledby="t-contact" hidden>
     <div class="titlebar">
       <span class="ttl" id="t-contact">Contact</span>
       <div class="tbtns"><button class="tb close" aria-label="Close">×</button></div>
     </div>
-
+ 
     <div class="dialog">
       <i class="ic ic-mail"></i>
       <div>
@@ -245,7 +323,7 @@
       <a class="btn default" href="mailto:jiayu.joyho@gmail.com" data-fr="Écrire">Email</a>
     </div>
   </section>
-
+ 
   <!-- Recycle bin -->
   <section class="win raised" id="w-bin" data-x="520" data-y="300" style="--w:300px" aria-labelledby="t-bin" hidden>
     <div class="titlebar">
@@ -258,9 +336,9 @@
     </div>
     <div class="dialog-actions"><button class="btn default close-btn">OK</button></div>
   </section>
-
+ 
 </main>
-
+ 
 <!-- Start menu -->
 <div class="menu raised" id="menu" hidden>
   <div class="side">Joy.exe</div>
@@ -269,13 +347,14 @@
     <li><button data-open="w-projects"><i class="ic ic-folder"></i><span data-fr="Projets">Projects</span></button></li>
     <li><button data-open="w-skills"><i class="ic ic-chart"></i><span data-fr="Compétences">Skills</span></button></li>
     <li><button data-open="w-general"><i class="ic ic-doc"></i><span data-fr="Savoir-faire">General skills</span></button></li>
+    <li><button data-open="w-blender"><i class="ic ic-cam"></i><span>Joygram</span></button></li>
     <li><button data-open="w-exp"><i class="ic ic-folder"></i><span data-fr="Expérience">Experience</span></button></li>
     <li><button data-open="w-contact"><i class="ic ic-mail"></i><span>Contact</span></button></li>
     <li><hr></li>
-    <li><a href="resume.pdf" target="_blank" rel="noopener"><i class="ic ic-doc"></i><span data-fr="CV (PDF)">Résumé (PDF)</span></a></li>
+    <li><a href="assets/resume.pdf" target="_blank" rel="noopener"><i class="ic ic-doc"></i><span data-fr="CV (PDF)">Résumé (PDF)</span></a></li>
   </ul>
 </div>
-
+ 
 <!-- Taskbar -->
 <footer class="taskbar">
   <button class="btn start" id="start" aria-expanded="false" aria-controls="menu"><span class="heart">♥</span>Joy</button>
@@ -285,7 +364,7 @@
     <span id="clock"></span>
   </div>
 </footer>
-
+ 
 <script src="js/main.js"></script>
 </body>
 </html>

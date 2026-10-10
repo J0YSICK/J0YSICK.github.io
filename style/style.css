@@ -258,3 +258,61 @@
 }
 .skills-more { display: flex; justify-content: flex-end; margin-top: 14px; }
 @media (max-width: 999px) { #w-general { order: 5; } }
+/* Camera icon (3D renders) */
+.ic-cam { height: 24px; margin-top: 4px; border: 1px solid var(--black); border-radius: 6px;
+  background: radial-gradient(circle at 50% 54%, var(--black) 0 3px, #fff 3.5px 5px, var(--black) 5.5px 6.5px, transparent 7px),
+              radial-gradient(circle at 27px 6px, var(--black) 0 1.5px, transparent 2px),
+              linear-gradient(135deg, #f7c948, #e0434c 55%, #8a3ab9); }
+
+/* Instagram-style renders window */
+.gram .profile { display: grid; grid-template-columns: 76px 1fr; gap: 14px; align-items: center; padding: 12px 10px 10px; }
+.profile-pic { position: relative; width: 76px; height: 76px; padding: 4px; display: grid; place-items: center; overflow: hidden; }
+.profile-pic img { position: absolute; inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); object-fit: cover; }
+.profile-pic b { font: 700 36px/1 var(--pixel); color: var(--navy); }
+.profile-name { margin: 0 0 4px; font: 700 18px/1.2 var(--pixel); }
+.stats { list-style: none; display: flex; gap: 14px; margin: 0 0 4px; padding: 0; font-size: 14px; }
+.profile-bio { margin: 0; font-size: 14px; }
+
+.feed { margin: 0 3px 3px; padding: 10px; background: #e9e9e9; }
+.post { background: var(--white); border: 1px solid var(--shadow); margin-bottom: 14px; }
+.post:last-child { margin-bottom: 0; }
+.post-head { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-bottom: 1px solid #d4d4d4; }
+.post-avatar { width: 26px; height: 26px; display: grid; place-items: center; flex: none; color: var(--white);
+  font: 700 14px/1 var(--pixel); background: linear-gradient(135deg, #f7c948, #e0434c 55%, #8a3ab9); border: 1px solid var(--black); }
+.post-avatar { position: relative; overflow: hidden; }
+.post-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.post-user { font-weight: 700; font-size: 14px; }
+.post-tool { margin-left: auto; font-size: 12px; color: #555; }
+
+.post-media { position: relative; background: var(--black); user-select: none; }
+.post-media img, .post-media video { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; }
+.post-media [hidden] { display: none; }
+.media-missing { display: grid; place-items: center; aspect-ratio: 1; padding: 16px; text-align: center;
+  font: 600 14px/1.4 var(--pixel); color: #bbb; background: repeating-conic-gradient(#2a2a2a 0 25%, #222 0 50%) 0 0 / 16px 16px; }
+
+.post-actions { display: flex; align-items: center; padding: 6px 6px 0; }
+.like { border: 0; background: none; padding: 4px; cursor: pointer; line-height: 0; }
+.like svg { width: 28px; height: 24px; fill: var(--white); stroke: var(--black); stroke-width: .9; shape-rendering: crispEdges; }
+.like:hover svg { fill: #ffd6d9; }
+.like[aria-pressed="true"] svg { fill: #e0434c; stroke: #6b0f17; }
+.post-cap { margin: 2px 10px 2px; font-size: 14px; }
+.post-cap .tags { color: var(--link); }
+.post-date { display: block; margin: 0 10px 10px; font-size: 12px; color: #6b6b6b; }
+
+.burst { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; opacity: 0; }
+.burst svg { width: 96px; height: 82px; fill: #e0434c; stroke: var(--white); stroke-width: .6; shape-rendering: crispEdges;
+  filter: drop-shadow(3px 3px 0 rgba(0,0,0,.4)); }
+.burst.pop { animation: burst .7s steps(6) both; }
+@keyframes burst { 0% { opacity: 0; transform: scale(.4); } 25% { opacity: 1; transform: scale(1.1); }
+  70% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@media (prefers-reduced-motion: no-preference) {
+  .like.bump svg { animation: bump .3s steps(3); }
+  @keyframes bump { 50% { transform: scale(1.3); } }
+}
+@media (prefers-reduced-motion: reduce) { .burst.pop { animation-duration: .01s; } }
+
+@media (min-width: 1000px) { .gram .feed { max-height: 520px; overflow-y: auto; } }
+@media (max-width: 999px) { #w-blender { order: 3; } }
+
+.gram .feed { overflow-x: hidden; }
+.post-media { overflow: hidden; }
